@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studiare in Italia Official — Orientamento, Guide e Supporto allo Studio</title>
+<meta name="description" content="Orientamento universitario, guide pratiche e metodo di studio per studenti italiani e internazionali. Scegli il percorso giusto, supera gli esami e studia in Italia senza stress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#15294D;
+  --navy-700:#1E3A6B;
+  --ink:#0F1B33;
+  --green:#2FB87A;
+  --green-600:#249C66;
+  --amber:#F5B544;
+  --cream:#FBF8F1;
+  --paper:#FFFFFF;
+  --muted:#5B6A85;
+  --line:#E7E2D6;
+  --radius:18px;
+  --shadow:0 18px 40px -18px rgba(21,41,77,.28);
+  --shadow-sm:0 8px 24px -14px rgba(21,41,77,.30);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.12;letter-spacing:-.01em;color:var(--navy)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.tricolore{height:5px;width:100%;background:linear-gradient(90deg,#2FB87A 0 33.33%,#FBF8F1 33.33% 66.66%,#E14B4B 66.66% 100%)}
+
+/* NAV */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(251,248,241,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy);font-size:1.05rem}
+.logo{width:42px;height:42px;border-radius:12px;background:var(--navy);display:grid;place-items:center;color:#fff;font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;box-shadow:var(--shadow-sm)}
+.logo span{background:linear-gradient(135deg,var(--green),var(--amber));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-weight:600;font-size:.95rem;color:var(--navy-700)}
+.nav-links a:hover{color:var(--green-600)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.95rem;padding:12px 22px;border-radius:999px;cursor:pointer;border:none;transition:transform .15s ease,box-shadow .15s ease}
+.btn-primary{background:var(--green);color:#fff;box-shadow:var(--shadow-sm)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(47,184,122,.55)}
+.btn-ghost{background:transparent;border:1.5px solid var(--navy);color:var(--navy)}
+.btn-ghost:hover{background:var(--navy);color:#fff}
+.nav-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--navy);cursor:pointer}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:84px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--green-600);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;padding:7px 14px;border-radius:999px;box-shadow:var(--shadow-sm)}
+.hero h1{font-size:clamp(2.4rem,5vw,3.7rem);margin:22px 0 18px;font-weight:700}
+.hero h1 em{font-style:normal;color:var(--green-600)}
+.hero p.lead{font-size:1.18rem;color:var(--muted);max-width:520px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.hero-stats{display:flex;gap:34px;margin-top:40px;flex-wrap:wrap}
+.stat b{font-family:'Fraunces',serif;font-size:1.8rem;color:var(--navy);display:block}
+.stat span{font-size:.85rem;color:var(--muted);font-weight:600}
+.hero-card{background:var(--paper);border-radius:24px;box-shadow:var(--shadow);border:1px solid var(--line);padding:26px;position:relative}
+.hero-card h3{font-size:1.15rem;margin-bottom:6px}
+.checklist{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:13px}
+.checklist li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem;font-weight:500;color:var(--ink)}
+.tick{flex:0 0 24px;height:24px;border-radius:8px;background:rgba(47,184,122,.14);color:var(--green-600);display:grid;place-items:center;font-weight:800;font-size:.85rem}
+.float-badge{position:absolute;top:-18px;right:-12px;background:var(--amber);color:var(--ink);font-weight:800;font-size:.82rem;padding:10px 16px;border-radius:14px;box-shadow:var(--shadow-sm);transform:rotate(4deg)}
+.blob{position:absolute;border-radius:50%;filter:blur(8px);opacity:.5;z-index:-1}
+
+/* SECTIONS */
+section{padding:78px 0}
+.section-head{text-align:center;max-width:640px;margin:0 auto 50px}
+.section-head .eyebrow{margin-bottom:16px}
+.section-head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:14px}
+.section-head p{color:var(--muted);font-size:1.08rem}
+
+/* AUDIENCE */
+.aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.aud-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;transition:transform .18s ease,box-shadow .18s ease}
+.aud-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.aud-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px}
+.aud-card h3{font-size:1.25rem;margin-bottom:8px}
+.aud-card p{color:var(--muted);font-size:.97rem}
+
+/* SERVICES */
+#servizi{background:var(--navy);color:#fff}
+#servizi h2,#servizi .section-head h2{color:#fff}
+#servizi .section-head p{color:#B9C6DE}
+#servizi .eyebrow{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:var(--amber)}
+.serv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.serv-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:28px;display:flex;gap:18px;align-items:flex-start}
+.serv-card .num{font-family:'Fraunces',serif;font-size:1.7rem;color:var(--amber);flex:0 0 auto}
+.serv-card h3{color:#fff;font-size:1.2rem;margin-bottom:6px}
+.serv-card p{color:#B9C6DE;font-size:.96rem}
+
+/* GUIDES */
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.guide-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.guide-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.guide-top{height:120px;display:grid;place-items:center;font-size:2.6rem}
+.guide-body{padding:22px 24px}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--green-600);background:rgba(47,184,122,.12);padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.guide-body h3{font-size:1.15rem;margin-bottom:8px}
+.guide-body p{color:var(--muted);font-size:.93rem;margin-bottom:14px}
+.guide-link{font-weight:700;color:var(--navy);font-size:.92rem}
+.guide-link:hover{color:var(--green-600)}
+
+/* SOCIAL */
+#social{background:linear-gradient(160deg,#fff,var(--cream))}
+.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.social-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:var(--shadow-sm)}
+.social-row{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.social-row:last-child{border-bottom:none}
+.social-ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.2rem;flex:0 0 auto}
+.ig{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF)}
+.tt{background:#0F1B33}
+.social-row b{display:block;font-size:1rem}
+.social-row span{color:var(--muted);font-size:.88rem}
+
+/* NEWSLETTER */
+.cta-band{background:var(--green);border-radius:26px;padding:54px 40px;text-align:center;color:#fff;box-shadow:var(--shadow)}
+.cta-band h2{color:#fff;font-size:clamp(1.8rem,3.4vw,2.4rem);margin-bottom:12px}
+.cta-band p{color:rgba(255,255,255,.9);max-width:520px;margin:0 auto 26px}
+.form-row{display:flex;gap:12px;max-width:480px;margin:0 auto;flex-wrap:wrap}
+.form-row input{flex:1;min-width:220px;padding:15px 20px;border-radius:999px;border:none;font-size:1rem;font-family:inherit}
+.form-row .btn{background:var(--navy);color:#fff}
+.form-row .btn:hover{background:var(--ink)}
+.form-note{font-size:.8rem;color:rgba(255,255,255,.8);margin-top:14px}
+
+/* FAQ */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:4px 22px;margin-bottom:12px}
+.faq summary{cursor:pointer;font-weight:700;color:var(--navy);padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:1.02rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-size:1.5rem;color:var(--green-600);font-weight:400}
+.faq details[open] summary::after{content:'\2013'}
+.faq p{color:var(--muted);padding:0 0 18px;font-size:.97rem}
+
+/* FOOTER */
+footer{background:var(--ink);color:#C7D0E0;padding:60px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer .brand{color:#fff;margin-bottom:14px}
+footer p{font-size:.92rem;color:#9CA9C2;max-width:300px}
+.foot-col h4{color:#fff;font-size:.95rem;margin-bottom:14px;font-family:'Plus Jakarta Sans';font-weight:700}
+.foot-col a{display:block;color:#9CA9C2;font-size:.92rem;margin-bottom:9px}
+.foot-col a:hover{color:var(--green)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.84rem;color:#7E8AA6}
+
+@media(max-width:900px){
+  .hero-grid,.social-grid{grid-template-columns:1fr;gap:40px}
+  .aud-grid,.guide-grid,.serv-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:28px}
+  .nav-links{position:fixed;inset:72px 0 auto 0;background:var(--cream);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);transform:translateY(-150%);transition:transform .3s ease}
+  .nav-links.open{transform:translateY(0)}
+  .nav-toggle{display:block}
+}
+</style>
+</head>
+<body>
+<div class="tricolore"></div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="brand"><span class="logo"><span>S</span></span> Studiare in Italia <span style="color:var(--green-600)">Official</span></a>
+    <nav class="nav-links" id="menu">
+      <a href="#chi-siamo">Chi siamo</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#guide">Guide</a>
+      <a href="#social">Social</a>
+      <a href="#contatti" class="btn btn-primary">Inizia ora</a>
+    </nav>
+    <button class="nav-toggle" id="toggle" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob" style="width:340px;height:340px;background:var(--green);top:-80px;right:-60px"></div>
+  <div class="blob" style="width:260px;height:260px;background:var(--amber);bottom:-60px;left:-40px"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">&#127891; Orientamento &middot; Guide &middot; Metodo di studio</span>
+      <h1>Studiare in Italia non deve essere <em>un labirinto</em>.</h1>
+      <p class="lead">Ti aiutiamo a scegliere il percorso giusto, a iscriverti senza errori e a studiare con un metodo che funziona davvero — dalle superiori all'università.</p>
+      <div class="hero-cta">
+        <a href="#contatti" class="btn btn-primary">Ricevi le guide gratis</a>
+        <a href="#servizi" class="btn btn-ghost">Scopri i servizi</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>90+</b><span>Università italiane</span></div>
+        <div class="stat"><b>0&euro;</b><span>Guide di base</span></div>
+        <div class="stat"><b>1:1</b><span>Supporto personalizzato</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <span class="float-badge">Gratis &#10024;</span>
+        <h3>Il tuo punto di partenza</h3>
+        <p style="color:var(--muted);font-size:.95rem">Tutto ciò che serve per orientarti, in un unico posto:</p>
+        <ul class="checklist">
+          <li><span class="tick">&#10003;</span> Come scegliere la facoltà giusta (test incluso)</li>
+          <li><span class="tick">&#10003;</span> Scadenze, test d'ingresso e immatricolazioni</li>
+          <li><span class="tick">&#10003;</span> Borse di studio, ISEE e agevolazioni</li>
+          <li><span class="tick">&#10003;</span> Metodo di studio per superare gli esami</li>
+          <li><span class="tick">&#10003;</span> Guida per studenti internazionali (visti & alloggi)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHI SIAMO / AUDIENCE -->
+<section id="chi-siamo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Per chi siamo</span>
+      <h2>Un punto di riferimento per ogni studente</h2>
+      <p>Che tu debba scegliere l'università, superare la sessione o trasferirti in Italia, qui trovi informazioni chiare e supporto vero.</p>
+    </div>
+    <div class="aud-grid">
+      <div class="aud-card">
+        <div class="aud-icon" style="background:rgba(47,184,122,.14)">&#127979;</div>
+        <h3>Maturandi</h3>
+        <p>Orientamento post-diploma: scegli il corso giusto, scopri sbocchi e test d'ingresso senza ansia da scelta.</p>
+      </div>
+      <div class="aud-card">
+        <div class="aud-icon" style="background:rgba(245,181,68,.18)">&#128218;</div>
+        <h3>Universitari</h3>
+        <p>Metodo di studio, organizzazione esami, borse di studio e dritte per non perdersi tra crediti e appelli.</p>
+      </div>
+      <div class="aud-card">
+        <div class="aud-icon" style="background:rgba(225,75,75,.14)">&#127757;</div>
+        <h3>Studenti internazionali</h3>
+        <p>Visti, pre-iscrizioni, riconoscimento titoli e alloggi: la guida pratica per studiare in Italia dall'estero.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section id="servizi">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Cosa facciamo</span>
+      <h2>Servizi e supporto</h2>
+      <p>Contenuti gratuiti per tutti e percorsi 1:1 per chi vuole una mano in più.</p>
+    </div>
+    <div class="serv-grid">
+      <div class="serv-card"><span class="num">01</span><div><h3>Orientamento universitario</h3><p>Test attitudinale, confronto tra corsi e atenei, analisi sbocchi lavorativi e piano di scelta su misura.</p></div></div>
+      <div class="serv-card"><span class="num">02</span><div><h3>Guide pratiche</h3><p>Immatricolazioni, test d'ingresso, borse di studio, ISEE, alloggi: passo passo, senza burocratese.</p></div></div>
+      <div class="serv-card"><span class="num">03</span><div><h3>Metodo di studio</h3><p>Tecniche di memorizzazione, gestione del tempo e preparazione esami per studiare meglio in meno ore.</p></div></div>
+      <div class="serv-card"><span class="num">04</span><div><h3>Supporto internazionale</h3><p>Assistenza per studenti esteri: visto studio, Universitaly, codice fiscale, permesso di soggiorno e alloggio.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section id="guide">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Risorse gratuite</span>
+      <h2>Guide più richieste</h2>
+      <p>Le risorse che gli studenti ci chiedono di più. Aggiornate ogni anno accademico.</p>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <div class="guide-top" style="background:rgba(47,184,122,.12)">&#129504;</div>
+        <div class="guide-body"><span class="tag">Orientamento</span><h3>Come scegliere la facoltà</h3><p>5 domande da farti prima di decidere e un test per capire dove sei più portato.</p><a href="#contatti" class="guide-link">Leggi la guida &rarr;</a></div>
+      </div>
+      <div class="guide-card">
+        <div class="guide-top" style="background:rgba(245,181,68,.16)">&#128221;</div>
+        <div class="guide-body"><span class="tag">Burocrazia</span><h3>Borse di studio & ISEE</h3><p>Chi può richiederle, come si calcola l'ISEE e gli errori che ti fanno perdere i fondi.</p><a href="#contatti" class="guide-link">Leggi la guida &rarr;</a></div>
+      </div>
+      <div class="guide-card">
+        <div class="guide-top" style="background:rgba(225,75,75,.12)">&#9201;&#65039;</div>
+        <div class="guide-body"><span class="tag">Metodo</span><h3>Studiare in metà tempo</h3><p>Il metodo in 4 step per preparare un esame e ricordare ciò che studi.</p><a href="#contatti" class="guide-link">Leggi la guida &rarr;</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social">
+  <div class="wrap social-grid">
+    <div>
+      <span class="eyebrow">Seguici ogni giorno</span>
+      <h2 style="font-size:clamp(1.8rem,3.4vw,2.4rem);margin:16px 0 14px">Consigli, dritte e guide<br>ogni giorno sui social</h2>
+      <p style="color:var(--muted);font-size:1.05rem">Pubblichiamo ogni giorno contenuti su orientamento, scadenze e metodo di studio. Niente teoria inutile: solo cose che ti servono davvero.</p>
+      <div style="margin-top:24px"><a href="#contatti" class="btn btn-primary">Unisciti alla community</a></div>
+    </div>
+    <div class="social-card">
+      <a class="social-row" href="https://instagram.com/studiareinitalia.official" target="_blank" rel="noopener">
+        <span class="social-ic ig">&#128247;</span>
+        <div style="flex:1"><b>@studiareinitalia.official</b><span>Caroselli, guide e dietro le quinte su Instagram</span></div>
+        <span style="color:var(--green-600);font-weight:700">&rarr;</span>
+      </a>
+      <a class="social-row" href="https://tiktok.com/@studiareinitalia.official" target="_blank" rel="noopener">
+        <span class="social-ic tt">&#9834;</span>
+        <div style="flex:1"><b>@studiareinitalia.official</b><span>Video brevi: dritte rapide e risposte ai vostri dubbi</span></div>
+        <span style="color:var(--green-600);font-weight:700">&rarr;</span>
+      </a>
+      <a class="social-row" href="#contatti">
+        <span class="social-ic" style="background:var(--green)">&#9993;</span>
+        <div style="flex:1"><b>Newsletter studenti</b><span>Scadenze e guide direttamente nella tua email</span></div>
+        <span style="color:var(--green-600);font-weight:700">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI / NEWSLETTER -->
+<section id="contatti">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Ricevi gratis il kit dello studente</h2>
+      <p>Guide, scadenze e checklist per orientarti e studiare meglio. Lascia la tua email — niente spam, solo roba utile.</p>
+      <form class="form-row" onsubmit="event.preventDefault();this.reset();document.getElementById('ok').style.display='block';">
+        <input type="email" placeholder="La tua email" required>
+        <button class="btn" type="submit">Voglio il kit</button>
+      </form>
+      <div id="ok" style="display:none;margin-top:16px;font-weight:700">&#10003; Perfetto! Controlla la tua casella email.</div>
+      <p class="form-note">Iscrivendoti accetti di ricevere comunicazioni da Studiare in Italia Official. Puoi disiscriverti quando vuoi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Dubbi frequenti</span>
+      <h2>Domande &amp; risposte</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>I contenuti sono gratuiti?</summary><p>Sì. Guide, post e video sono gratuiti. Offriamo anche percorsi di orientamento e tutoraggio 1:1 a pagamento per chi vuole un supporto personalizzato.</p></details>
+      <details><summary>Aiutate anche gli studenti stranieri?</summary><p>Assolutamente. Abbiamo guide dedicate su visto studio, procedura Universitaly, riconoscimento del titolo, codice fiscale, permesso di soggiorno e ricerca alloggio.</p></details>
+      <details><summary>Da dove inizio se non so quale facoltà scegliere?</summary><p>Parti dal test di orientamento e dalla guida "Come scegliere la facoltà". Iscriviti alla newsletter e ti inviamo il percorso passo passo.</p></details>
+      <details><summary>Le informazioni sono aggiornate?</summary><p>Sì, rivediamo guide e scadenze a ogni anno accademico. Le date specifiche vanno sempre verificate sul sito ufficiale del singolo ateneo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><span class="logo"><span>S</span></span> Studiare in Italia Official</div>
+        <p>Orientamento, guide pratiche e metodo di studio per chi vuole studiare in Italia senza perdersi nella burocrazia.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Esplora</h4>
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#guide">Guide</a>
+        <a href="#contatti">Contatti</a>
+      </div>
+      <div class="foot-col">
+        <h4>Seguici</h4>
+        <a href="https://instagram.com/studiareinitalia.official" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/@studiareinitalia.official" target="_blank" rel="noopener">TikTok</a>
+        <a href="#contatti">Newsletter</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Studiare in Italia Official. Tutti i diritti riservati.</span>
+      <span>Fatto con &#128154; per gli studenti</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const t=document.getElementById('toggle'),m=document.getElementById('menu');
+  t.addEventListener('click',()=>m.classList.toggle('open'));
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.remove('open')));
+</script>
+</body>
+</html>
